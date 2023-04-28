@@ -114,7 +114,7 @@ deleteInvestment(investment_Pk){
  const url = `${API_URL}/api/stocks/`;
  let jwtToken = localStorage.getItem('token');
  const headers = {Authorization: `jwt ${jwtToken}`};
- return axios.post(url, investment, {headers: headers});
+ return axios.post(url, stock, {headers: headers});
 }
 
 
@@ -122,7 +122,7 @@ updateStock(stock){
   const url = `${API_URL}/api/stocks/${stock.pk}`;
   let jwtToken = localStorage.getItem('token');
   const headers = {Authorization: `jwt ${jwtToken}`};
-  return axios.put(url, investment, {headers: headers});
+  return axios.put(url, stock, {headers: headers});
 }
 
 
